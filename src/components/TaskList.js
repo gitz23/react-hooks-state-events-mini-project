@@ -5,9 +5,7 @@ import { useState } from "react";
 function TaskList({tasks}) {
 
   const newTaskList = tasks.map((task)=>{
-    return (<li > 
-    <Task key={task} text={task.text} category={task.category} />
-    </li>)
+    return (<Task key={task} text={task.text} category={task.category} />)
   })
 
   return (
