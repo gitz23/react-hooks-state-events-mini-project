@@ -3,14 +3,20 @@ import Task from "../components/Task"
 
 function TaskList({tasks}) {
 
-  const newTaskList = tasks.map((task, index)=>{
-    return <Task key={index} text={task.text} category={task.category}/>
+  // function deleteTask(){
+
+  // }
+
+  const newTaskList = tasks.map((task)=>{
+    return (<li key={task} >
+    <Task text={task.text} category={task.category} 
+    //onClick={deleteTask}
+    /></li>)
   })
 
   return (
     <div className="tasks">
       {newTaskList}
-      {/* display a list of tasks using Task component */}
     </div>
   );
 }
